@@ -1,7 +1,7 @@
 #ifndef _BITMAP_H_   
 #define _BITMAP_H_  
 
-#define BITMAP_SIZE 150
+#define BITMAP_SIZE 50000000
 
 typedef struct bitmap{
     unsigned char*  p;
@@ -43,6 +43,9 @@ inline int bitmap_get(bitmap* b,int i);
  */  
 int bitmap_data(bitmap* b,int index);  
   
+/*返回bitmap中1的个数*/  
+int bitmap_count1(bitmap* b);  
+
 /*释放内存*/  
 int bitmap_free(bitmap* b);  
   

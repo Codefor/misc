@@ -58,3 +58,17 @@ int bitmap_free(bitmap* b)
     free(b);  
     return 0;
 }
+
+int bitmap_count1(bitmap* b){
+    int total = 0;
+    int a = 0;
+    int i;
+    for(i=0;i<b->size;i++){
+        a = (int)(b->p[i]);
+        while(a){
+            total += 1;
+            a = a & (a-1);
+        }
+    }
+    return total;
+}
