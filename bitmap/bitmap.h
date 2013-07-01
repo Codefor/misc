@@ -1,7 +1,7 @@
 #ifndef _BITMAP_H_   
 #define _BITMAP_H_  
 
-#define BITMAP_SIZE 50000000
+#define BITMAP_SIZE 100
 
 typedef struct bitmap{
     unsigned char*  p;

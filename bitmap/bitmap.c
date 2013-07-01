@@ -14,19 +14,20 @@ int bitmap_init(bitmap* b, int size, int start){
   
 int bitmap_set(bitmap* b,int index)  
 {
-    int quo = (index-b->base)/8 ;  
-    int remainder = (index-b->base)%8;  
+    int quo = (index-b->base) >> 3 ;  
+    int remainder = (index-b->base)&7;  
     unsigned char x = (0x1<<remainder);  
     if( quo > b->size)  
         return 0;  
     b->p[quo] |= x;  
+    printf("%d %d %d\n",index,quo,remainder);
     return 1;   
 }  
   
 inline int bitmap_get(bitmap* b,int i)  
 {  
-    int quo = (i)/8 ;  
-    int remainder = (i)%8;  
+    int quo = (i)>>3 ;  
+    int remainder = (i)&7;  
     unsigned char x = (0x1<<remainder);  
     unsigned char res;  
     if( quo > b->size)  
