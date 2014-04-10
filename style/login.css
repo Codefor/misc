@@ -1,0 +1,24 @@
+body{
+	background: url(login-bg.jpg);
+}
+
+.login-div{
+	margin-top: 180px;
+}
+
+.login-div h1{
+	font-size: 44px;
+	color: white;
+	opacity: 0.8;
+	margin-bottom:20px;
+}
+
+.login-div .opacity05{
+	opacity: 0.5;
+	border-radius: 5px;
+	font-size:16px;
+}
+
+.login-div input:focus{
+	opacity: 1;
+}
